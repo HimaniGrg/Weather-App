@@ -39,24 +39,28 @@
     form{
         position: absolute;
         top: 300px;
-        left: 400px;
+        left: 500px;
+        display: block;
+        width: 30%;
     }
+    
 </style>
 <script>
-    function formData(){
-    var stateName = document.getElementById("state_name").value;
-    console.log(stateName);
-}
+    function myfunction(){
+    var data = document.getElementById("state_name").value;
+    console.log(data);
+    window.localStorage.setItem("state_name",data);
+    }
 </script>
 <body>
     <img src="./weather.jpg">
     <header>Weather Forecast Application</header>
-        <h5>Find out the weather condition of cities...</h5>
-        <form id="form">
-            <input type="text" id="state_name" placeholder="Enter the name of state: " required>
-            <button onclick="formData()">Search</button>
-        </form>
-            
-        
+    <h5>Find out the weather condition of cities...</h5>
+    <form id="form" action="weather.html">
+        <input type="text" id="state_name" placeholder="Enter the name of state: " required>
+        <button onclick="myfunction()">Search</button>       
+    </form>         
+    
 </body>
+
 </html>

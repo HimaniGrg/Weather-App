@@ -5,6 +5,7 @@
     height: 100%;
     width: 100%;
     background-color: skyblue;
+    opacity: 0.5;
 }
 header{
     font-size: xx-large;

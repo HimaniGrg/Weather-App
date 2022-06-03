@@ -1,5 +1,6 @@
-
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Washington DC&appid=396da7ec7a9cf46301375013583fdeb8')
+var stateName = window.localStorage.getItem("state_name");
+console.log(stateName);
+fetch('https://api.openweathermap.org/data/2.5/weather?q='+stateName+'&appid=396da7ec7a9cf46301375013583fdeb8')
     .then(response => response.json())
     .then(response => {
         document.getElementById("location").innerText= "Weather in "+response.name+", "+response.sys.country;
@@ -13,19 +14,27 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Washington DC&appid=396
         document.getElementById("speed").innerText=response.wind.speed+" "+"m/s";
         document.getElementById("direction").innerText=response.wind.deg+"°";
 
-        // console.log(response.weather[0].main);
-        // console.log(response.name);
+        console.log(response.weather[0].main);
+        console.log(response.name);
+        var mainWeather = response.weather[0].main;
+        console.log(mainWeather);
 
-        if(response.weather[0].main = "Clouds"){
+        if (mainWeather == "Mist"){
+            var background = "./mist.jfif";
+        }
+        else if (mainWeather == "Clouds"){
             var background = "./cloud.jfif";
-            document.getElementById("background").src=background;
         }
-        else if(response.weather[0].main = "Clear"){
+        else if (mainWeather == "Clear"){
             var background = "./clearsky.jfif";
-            document.getElementById("background").src=background;
         }
-        else if(response.weather[0].main = "Rainy"){
+        else if (mainWeather == "Rain"){
             var background = "./rain.jfif";
-            document.getElementById("background").src=background;
         }
+        else{
+            var background = "";
+        }
+        
+        console.log(background);
+        document.getElementById("background").src=background;
     })
