@@ -1,0 +1,41 @@
+#background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: skyblue;
+}
+header{
+    font-size: xx-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 5px;
+    letter-spacing: 10px;
+    position: absolute;
+    top: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-style: oblique;
+    background-color: rgb(104, 96, 96);
+    border: 2px solid black;
+    box-shadow: 5px 3px 3px 5px rgb(165, 164, 164);
+    border-radius: 25px;
+    margin: 20px;
+}
+.icon{
+    display: inline;
+    height: 20px;
+    margin-left: 20px;
+}
+table{
+    padding: 5px 10px;
+}

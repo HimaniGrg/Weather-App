@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<style>
+    img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    header{
+        font-size: xx-large;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        word-spacing: 5px;
+        letter-spacing: 10px;
+        position: absolute;
+        top: 125px;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    h5{
+        position: absolute;
+        top: 220px;
+        left: 390px;
+        word-spacing: 5px;
+        letter-spacing: 5px;
+
+    }
+    form{
+        position: absolute;
+        top: 300px;
+        left: 400px;
+    }
+</style>
+<script>
+    function formData(){
+    var stateName = document.getElementById("state_name").value;
+    console.log(stateName);
+}
+</script>
+<body>
+    <img src="./weather.jpg">
+    <header>Weather Forecast Application</header>
+        <h5>Find out the weather condition of cities...</h5>
+        <form id="form">
+            <input type="text" id="state_name" placeholder="Enter the name of state: " required>
+            <button onclick="formData()">Search</button>
+        </form>
+            
+        
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href = "style.css" rel="stylesheet">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <img id="background" src="" alt="weather" >
+    <header>Weather Forecast Application</header>
+    <div class='center'>
+        <table>
+            <th id="location" style="font-size: 25px;"> Location <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></th>
+            <tr>
+                <td><img id ="weathericon" src ="" alt="weather" width=100px height=100px></td>
+            </tr>
+            <tr>
+                <td>Main Weather</td>
+                <td id='weather'></td>
+            </tr>
+            <tr>
+                <td>Temperature(in Celsius)</td>
+                <td id='temp'></td>
+            </tr>
+            <tr>
+                <td>Pressure(in hPa)</td>
+                <td id='pressure'></td>
+            </tr>
+            <tr>
+                <td>Humidity(in %)</td>
+                <td id='humidity'></td>
+            </tr>
+            <tr>
+                <td>Wind Speed(in m/s)</td>
+                <td id='speed'></td>
+            </tr>
+            <tr>
+                <td>Wind Direction(in degree)</td>
+                <td id='direction'></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
