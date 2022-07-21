@@ -40,3 +40,12 @@ header{
 table{
     padding: 5px 10px;
 }
+.arrow{
+    display: inline;
+    height: 20px;
+}
+#trunback{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+}
